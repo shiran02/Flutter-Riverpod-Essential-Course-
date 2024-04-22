@@ -1,8 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+//ptf
 part 'user.freezed.dart';
+//pts
 part 'user.g.dart';
 
+// fdataclass
 @freezed
 class User with _$User {
   factory User({
