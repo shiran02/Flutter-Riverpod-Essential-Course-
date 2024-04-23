@@ -159,14 +159,15 @@ class __$$UserImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$UserImpl implements _User {
+class _$UserImpl extends _User {
   _$UserImpl(
       {required this.id,
       required this.name,
       required this.username,
       required this.email,
       required this.phone,
-      required this.website});
+      required this.website})
+      : super._();
 
   factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserImplFromJson(json);
@@ -183,11 +184,6 @@ class _$UserImpl implements _User {
   final String phone;
   @override
   final String website;
-
-  @override
-  String toString() {
-    return 'User(id: $id, name: $name, username: $username, email: $email, phone: $phone, website: $website)';
-  }
 
   @override
   bool operator ==(Object other) {
@@ -222,7 +218,7 @@ class _$UserImpl implements _User {
   }
 }
 
-abstract class _User implements User {
+abstract class _User extends User {
   factory _User(
       {required final int id,
       required final String name,
@@ -230,6 +226,7 @@ abstract class _User implements User {
       required final String email,
       required final String phone,
       required final String website}) = _$UserImpl;
+  _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
 

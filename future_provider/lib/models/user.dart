@@ -8,6 +8,8 @@ part 'user.g.dart';
 // fdataclass
 @freezed
 class User with _$User {
+  const User._();
+
   factory User({
     required int id,
     required String name,
@@ -16,6 +18,9 @@ class User with _$User {
     required String phone,
     required String website,
   }) = _User;
+
+  @override
+  String toString() => 'user(id :$id)';
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }

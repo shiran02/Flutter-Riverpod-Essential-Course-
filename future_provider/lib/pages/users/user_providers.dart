@@ -55,6 +55,7 @@ FutureOr<User> userDetail(UserDetailRef ref, int id) async {
   });
 
   final response = await ref.watch(dioProvider).get('/users/$id');
+  ref.keepAlive();
   final user = User.fromJson(response.data);
 
   return user;
