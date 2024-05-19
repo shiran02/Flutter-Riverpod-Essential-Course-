@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:provider_lifecycle/pages/provider_cascade/provider_casecade_page.dart';
 
 import 'pages/auto_dispose/auto_dispose_page.dart';
 import 'pages/keep_alive/keep_alive_page.dart';
+import 'pages/provider_cascade/provider_cascade_page.dart';
 import 'pages/sync_keep_alive/sync_keep_alive_page.dart';
 import 'widgets/custom_button.dart';
 
